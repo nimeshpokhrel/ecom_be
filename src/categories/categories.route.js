@@ -9,8 +9,6 @@ categoriesRouter.post(
   categoriesController.createCategory
 );
 
-categoriesRouter.get("/", (req, res) => {
-  return res.send("All Categories");
-});
+categoriesRouter.get("/", categoriesController.getAllCategories);
 
 module.exports = { categoriesRouter };

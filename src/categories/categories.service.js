@@ -8,6 +8,10 @@ class CategoryService {
     const category = this.Category.create({ ...data });
     return category;
   }
+  async getAllCategories(filters = {}) {
+    const categories = this.Category.find({ ...filters });
+    return categories;
+  }
 }
 
 module.exports = { CategoryService };
